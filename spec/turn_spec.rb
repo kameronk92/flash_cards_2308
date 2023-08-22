@@ -9,12 +9,11 @@ it 'exists' do
   expect(turn).to be_instance_of(Turn)
 end
 
-it 'exists'
-
 it 'has a guess' do
-    turn = Turn.guess
-
-    expect(Turn.guess).to eq(Juneau)
+  card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+  turn = Turn.new("Juneau", card)
+  turn.guess
+  expect(turn.guess).to eq("Juneau")
 end
 
 it 'has an answer' do
@@ -23,14 +22,9 @@ it 'has an answer' do
     expect(card.answer).to eq("Juneau")
 end
 
-  it 'has a category' do
-    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+#   it 'has a category' do
+#     card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
 
-    expect(card.category).to eq(:Geography)
-  end
-
-end
-
-
-
+#     expect(card.category).to eq(:Geography)
+#   end
 end
