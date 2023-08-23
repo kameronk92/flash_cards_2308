@@ -49,16 +49,16 @@ RSpec.describe Turn do
 
   it 'has a guess' do
     turn = Turn.new("Saturn", card)
-    expect(turn.guess).to eq(card.answer)
+    expect(turn.guess).to eq("Saturn")
   end
 
   it 'can be wrong' do
     turn = Turn.new("Saturn", card)
-    expect turn.correct?.to eq(false)
+    expect(turn.correct?).to be false
   end
 
   it 'provides negative feedback' do
     turn = Turn.new("Saturn", card)
-    expect turn.feedback.to eq("Incorrect.")
+    expect(turn.feedback).to eq("Incorrect.")
   end
 end
