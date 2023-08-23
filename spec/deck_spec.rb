@@ -19,7 +19,7 @@ end
 
 it 'contains the cards' do
   deck = Deck.new(cards)
-  require 'pry'; binding.pry
+  # require 'pry'; binding.pry
 end
 
 
